@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Stories - NASA Space Apps Challenge 2025 | Team Fakibazz</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 50%, #2a2a4a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem 0;
+        }
+
+        .nasa-badge {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #64b5f6, #81c784, #ffb74d, #ff6b35);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(100, 181, 246, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #b0bec5;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-info {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+
+        .challenge-title {
+            color: #ff6b35;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #90a4ae;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .page-content {
+            margin: 4rem 0;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero-content {
+            margin-bottom: 4rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #e3f2fd;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #b0bec5;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            margin: 0 1rem 1rem 0;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        .cta-button.secondary {
+            background: linear-gradient(45deg, #64b5f6, #81c784);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.3);
+        }
+
+        .cta-button.secondary:hover {
+            box-shadow: 0 15px 40px rgba(100, 181, 246, 0.4);
+        }
+
+        .button-icon {
+            font-size: 1.2rem;
+        }
+
+        .button-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover .button-arrow {
+            transform: translateX(5px);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card.highlight {
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            background: rgba(255, 107, 53, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: #81c784;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .feature-card.highlight h3 {
+            color: #ff6b35;
+        }
+
+        .feature-card p {
+            color: #90a4ae;
+            line-height: 1.5;
+        }
+
+        .challenge-overview {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .challenge-overview h2 {
+            color: #ff6b35;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .challenge-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #b0bec5;
+            margin-bottom: 2rem;
+        }
+
+        .impact-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .impact-item {
+            background: rgba(100, 181, 246, 0.1);
+            border: 1px solid rgba(100, 181, 246, 0.2);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            color: #64b5f6;
+            font-weight: 500;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+        }
+
+        .back-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: #b0bec5;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #e3f2fd;
+        }
+
+        .back-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover .back-arrow {
+            transform: translateX(-3px);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #e3f2fd;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(100, 181, 246, 0.2);
+        }
+
+        .video-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #81c784;
+        }
+
+        .video-description {
+            color: #b0bec5;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 4rem;
+        }
+
+        .footer-text {
+            color: #78909c;
+            font-size: 0.9rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(100, 181, 246, 0.2);
+        }
+
+        .team-image {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #64b5f6, #81c784);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-placeholder {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .team-name {
+            color: #e3f2fd;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: #ff6b35;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .team-description {
+            color: #b0bec5;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .faq-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+            background: rgba(255, 107, 53, 0.05);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+        }
+
+        .faq-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .faq-question h3 {
+            color: #ff6b35;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .faq-answer {
+            padding: 2rem;
+            color: #b0bec5;
+            line-height: 1.6;
+        }
+
+        .faq-answer p {
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .level-card {
+            background: rgba(100, 181, 246, 0.1);
+            border: 1px solid rgba(100, 181, 246, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .level-card h4 {
+            color: #64b5f6;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .level-card p {
+            color: #90a4ae;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-item {
+            background: rgba(129, 199, 132, 0.1);
+            border: 1px solid rgba(129, 199, 132, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h4 {
+            color: #81c784;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .benefit-item p {
+            color: #90a4ae;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .impact-goals {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .impact-goal {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: rgba(255, 107, 53, 0.05);
+            border: 1px solid rgba(255, 107, 53, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+        }
+
+        .goal-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .goal-content h4 {
+            color: #ff6b35;
+            font-size: 1.1rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+
+        .goal-content p {
+            color: #b0bec5;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .tool-item {
+            background: rgba(100, 181, 246, 0.1);
+            border: 1px solid rgba(100, 181, 246, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-item h4 {
+            color: #64b5f6;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .tool-item p {
+            color: #90a4ae;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .creativity-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .creativity-item {
+            background: rgba(129, 199, 132, 0.1);
+            border: 1px solid rgba(129, 199, 132, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .creativity-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .creativity-item h4 {
+            color: #81c784;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .creativity-item p {
+            color: #90a4ae;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .considerations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .consideration-item {
+            background: rgba(255, 183, 77, 0.1);
+            border: 1px solid rgba(255, 183, 77, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .consideration-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .consideration-item h4 {
+            color: #ffb74d;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .consideration-item p {
+            color: #90a4ae;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .video-card {
+                padding: 1.5rem;
+            }
+            
+            .page-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .challenge-overview {
+                padding: 2rem;
+            }
+            
+            .impact-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="nasa-badge">NASA Space Apps Challenge 2025</div>
+            <h1 class="title">SkyGlow</h1>
+            <p class="subtitle">Illuminating Space Weather Through Children's Stories</p>
+            <div class="challenge-info">
+                <div class="challenge-title">Challenge: Stellar Stories</div>
+                <p class="description">
+                    Creating an engaging digital children's story that explains space weather and its impact on different people - 
+                    from farmers and pilots to astronauts and power grid operators.
+                </p>
+            </div>
+        </header>
+
+        <!-- Homepage Content -->
+        <div id="homepage" class="page-content" style="display: block;">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title">Teaching Kids About Space Weather Through Stories</h2>
+                    <p class="hero-description">
+                        Our project brings space weather to life through engaging storytelling, helping children understand 
+                        how solar activity 93 million miles away can impact their daily lives. From the perspective of a 
+                        solar flare's journey to Earth, we explore how space weather affects farmers, pilots, astronauts, 
+                        and families around the world.
+                    </p>
+                    <div>
+                        <button class="cta-button" onclick="window.open('https://www.figma.com/proto/BFLOsGBy0Hg8ljc0oHR3Yl/nasa-spce-app?page-id=0%3A1&node-id=11-69&viewport=251%2C322%2C0.63&t=nC5jtneHQ7thzYDt-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=11%3A69&show-proto-sidebar=1', '_blank', 'noopener,noreferrer')">
+                            <span class="button-icon">🎨</span>
+                            View Live Prototype
+                            <span class="button-arrow">→</span>
+                        </button>
+                        <button class="cta-button" onclick="showVideos()">
+                            <span class="button-icon">🎬</span>
+                            View Research Videos
+                            <span class="button-arrow">→</span>
+                        </button>
+                        <button class="cta-button secondary" onclick="showChallenge()">
+                            <span class="button-icon">🚀</span>
+                            Challenge Details
+                            <span class="button-arrow">→</span>
+                        </button>
+                        <button class="cta-button" onclick="showTeam()">
+                            <span class="button-icon">👥</span>
+                            Meet Our Team
+                            <span class="button-arrow">→</span>
+                        </button>
+                        <button class="cta-button secondary" onclick="showFAQ()">
+                            <span class="button-icon">❓</span>
+                            Project FAQ
+                            <span class="button-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card highlight">
+                        <div class="feature-icon">📚</div>
+                        <h3>Interactive Story</h3>
+                        <p>Digital children's book explaining space weather through engaging characters and beautiful illustrations</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍🌾</div>
+                        <h3>Real-World Impact</h3>
+                        <p>Shows how space weather affects farmers, pilots, astronauts, and power grid operators</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">☀️</div>
+                        <h3>Solar Perspective</h3>
+                        <p>Story told from the viewpoint of a solar flare traveling from Sun to Earth</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Educational Value</h3>
+                        <p>Makes complex space weather concepts accessible and fun for young learners</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔬</div>
+                        <h3>Scientific Research</h3>
+                        <p>Backed by real atmospheric research including skyglow studies and light pollution analysis</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>NASA Challenge</h3>
+                        <p>Developed for NASA Space Apps Challenge 2025 to inspire the next generation of space scientists</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Challenge Details Page -->
+        <div id="challenge-page" class="page-content" style="display: none;">
+            <div class="page-header">
+                <button class="back-button" onclick="showHomepage()">
+                    <span class="back-arrow">←</span>
+                    Back to Home
+                </button>
+                <h2 class="section-title">Challenge Overview</h2>
+            </div>
+            
+            <div class="challenge-overview">
+                <h2>Stellar Stories Challenge</h2>
+                <p class="challenge-text">
+                    Although the Sun is 93 million miles away from our planet, solar activity can significantly impact our daily lives. 
+                    "Space weather"—the variations that occur in the space environment between the Sun and Earth—can impact technologies 
+                    in space and on Earth.
+                </p>
+                <p class="challenge-text">
+                    <strong>Our Mission:</strong> Write and illustrate a digital children's story that explains what space weather is and 
+                    the varying impacts it has on different people such as farmers, pilots, astronauts, power grid operators, and the general public.
+                </p>
+                <p class="challenge-text">
+                    We're telling the story from the perspective of a solar flare as it approaches Earth, showing children how this 
+                    cosmic journey affects people in different walks of life.
+                </p>
+                
+                <h3 style="color: #81c784; margin: 2rem 0 1rem 0;">People Affected by Space Weather:</h3>
+                <div class="impact-list">
+                    <div class="impact-item">👨‍🌾 Farmers</div>
+                    <div class="impact-item">✈️ Pilots</div>
+                    <div class="impact-item">👨‍🚀 Astronauts</div>
+                    <div class="impact-item">⚡ Power Grid Operators</div>
+                    <div class="impact-item">📡 Satellite Operators</div>
+                    <div class="impact-item">🏠 General Public</div>
+                </div>
+                
+                <p class="challenge-text">
+                    Our skyglow research videos provide scientific backing for understanding how atmospheric phenomena 
+                    and light pollution relate to space weather effects, helping us create an accurate and educational story.
+                </p>
+            </div>
+        </div>
+
+        <!-- Team Page Content -->
+        <div id="team-page" class="page-content" style="display: none;">
+            <div class="page-header">
+                <button class="back-button" onclick="showHomepage()">
+                    <span class="back-arrow">←</span>
+                    Back to Home
+                </button>
+                <h2 class="section-title">Our Team</h2>
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <p style="color: #b0bec5; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                    Meet the passionate team behind the Stellar Stories project - bringing together expertise in 
+                    storytelling, design, research, and development to create an engaging space weather education experience.
+                </p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <div class="image-placeholder">👨‍💼</div>
+                    </div>
+                    <h3 class="team-name">Rayed Bin Razzak</h3>
+                    <p class="team-role">Team Leader</p>
+                    <p class="team-description">Leading the project vision and coordinating team efforts to deliver an impactful educational story about space weather.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <div class="image-placeholder">📊</div>
+                    </div>
+                    <h3 class="team-name">Nahid Hasan</h3>
+                    <p class="team-role">Data Analyst</p>
+                    <p class="team-description">Analyzing space weather data and atmospheric research to ensure scientific accuracy in our children's story.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <div class="image-placeholder">🔬</div>
+                    </div>
+                    <h3 class="team-name">Saleh Sabit</h3>
+                    <p class="team-role">Researcher</p>
+                    <p class="team-description">Conducting comprehensive research on space weather impacts and gathering scientific foundations for the story.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <div class="image-placeholder">🎨</div>
+                    </div>
+                    <h3 class="team-name">Ankit Chowdhury</h3>
+                    <p class="team-role">UI/UX Designer</p>
+                    <p class="team-description">Designing beautiful and intuitive interfaces that make space weather concepts accessible to children.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <div class="image-placeholder">✍️</div>
+                    </div>
+                    <h3 class="team-name">Fatiha Tasnim Upoma</h3>
+                    <p class="team-role">Script Writer</p>
+                    <p class="team-description">Crafting engaging narratives that bring space weather to life through compelling storytelling for young readers.</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <div class="image-placeholder">💻</div>
+                    </div>
+                    <h3 class="team-name">Ahmed Amin</h3>
+                    <p class="team-role">Developer</p>
+                    <p class="team-description">Building interactive digital experiences and bringing the children's story to life through technology.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Page Content -->
+        <div id="faq-page" class="page-content" style="display: none;">
+            <div class="page-header">
+                <button class="back-button" onclick="showHomepage()">
+                    <span class="back-arrow">←</span>
+                    Back to Home
+                </button>
+                <h2 class="section-title">Project FAQ</h2>
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <p style="color: #b0bec5; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                    Learn more about our SkyGlow project - how it works, its benefits, and the impact we're creating 
+                    through interactive space weather education for children.
+                </p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">🛰️</span>
+                        <h3>What does SkyGlow do and how does it work?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SkyGlow is an interactive learning app concept designed to teach children about space weather — phenomena like solar flares, coronal mass ejections (CMEs), auroras, and geomagnetic storms — and how they affect our daily lives on Earth.</p>
+                        
+                        <p><strong>The app works through three learning levels:</strong></p>
+                        
+                        <div class="level-grid">
+                            <div class="level-card">
+                                <h4>🌟 Beginner Level</h4>
+                                <p>Introduces kids to basic concepts like auroras, solar flares, and satellites through playful animations and visuals.</p>
+                            </div>
+                            <div class="level-card">
+                                <h4>📖 Intermediate Level</h4>
+                                <p>Story-driven adventures where children follow relatable characters like farmers, pilots, and power grid operators, showing how space weather affects GPS, radio communication, and electricity.</p>
+                            </div>
+                            <div class="level-card">
+                                <h4>🔬 Advanced Level</h4>
+                                <p>For older learners, provides detailed simulations and research-based content, allowing users to explore NASA data and understand real impacts of solar activity.</p>
+                            </div>
+                        </div>
+                        
+                        <p>Through interactive storytelling, children learn by seeing cause-and-effect in real-world scenarios. For example, when a solar storm hits, Mr. Alex's GPS-guided tractor zigzags, Captain Drake's airplane radio goes silent, and Windy the power grid operator watches warning lights flash.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">🌞</span>
+                        <h3>What benefits does SkyGlow provide?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SkyGlow provides multiple educational and cognitive benefits:</p>
+                        
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🧠</div>
+                                <h4>Simplifies Complex Science</h4>
+                                <p>Converts technical NASA data into engaging stories, animations, and visuals, helping children understand difficult concepts like geomagnetic storms and solar flares.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✨</div>
+                                <h4>Increases Curiosity & Engagement</h4>
+                                <p>Children follow characters and storylines, making learning interactive and exciting rather than passive.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🌍</div>
+                                <h4>Teaches Real-World Relevance</h4>
+                                <p>Kids learn how space weather impacts technology, transportation, energy systems, and communication networks.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🚀</div>
+                                <h4>Supports STEM Education</h4>
+                                <p>Encourages interest in science, technology, engineering, and math through storytelling and research-inspired content.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🌈</div>
+                                <h4>Accessible & Inclusive Learning</h4>
+                                <p>Designed for all ages with three difficulty levels and visually appealing content for children worldwide.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">🎯</span>
+                        <h3>What is the intended impact of SkyGlow?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SkyGlow aims to create meaningful educational and inspirational impact:</p>
+                        
+                        <div class="impact-goals">
+                            <div class="impact-goal">
+                                <div class="goal-icon">🔬</div>
+                                <div class="goal-content">
+                                    <h4>Make Space Science Accessible</h4>
+                                    <p>By turning complex space weather data into stories, children can explore science without being intimidated by technical terms or graphs.</p>
+                                </div>
+                            </div>
+                            <div class="impact-goal">
+                                <div class="goal-icon">🌞</div>
+                                <div class="goal-content">
+                                    <h4>Promote Sun-Earth Connection Awareness</h4>
+                                    <p>Children see how solar activity affects people, technology, and society in everyday life, fostering curiosity and responsibility.</p>
+                                </div>
+                            </div>
+                            <div class="impact-goal">
+                                <div class="goal-icon">🚀</div>
+                                <div class="goal-content">
+                                    <h4>Inspire Future Scientists</h4>
+                                    <p>Through relatable characters and interactive experiences, SkyGlow encourages children to explore STEM subjects and think critically about scientific phenomena.</p>
+                                </div>
+                            </div>
+                            <div class="impact-goal">
+                                <div class="goal-icon">🌍</div>
+                                <div class="goal-content">
+                                    <h4>Encourage Global Science Literacy</h4>
+                                    <p>Digital storytelling provides an entry point for children everywhere to learn about the universe, even without access to formal science classes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p><strong>Overall Impact:</strong> Educational, motivational, and inspirational - combining curiosity-driven learning with real-world application to create the next generation of space scientists and informed citizens.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">💻</span>
+                        <h3>What tools and technologies did you use?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Since SkyGlow is a design and concept prototype, we used only software tools and online resources:</p>
+                        
+                        <div class="tools-grid">
+                            <div class="tool-item">
+                                <div class="tool-icon">🎨</div>
+                                <h4>Figma</h4>
+                                <p>For designing the app interface, interactive prototype pages, story layouts, and user navigation flow.</p>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool-icon">🖼️</div>
+                                <h4>Canva</h4>
+                                <p>To create visual assets, illustrations, infographics, and educational posters to support the storytelling.</p>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool-icon">🎬</div>
+                                <h4>CapCut</h4>
+                                <p>For editing promotional and presentation videos, including animations, transitions, and story previews.</p>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool-icon">📂</div>
+                                <h4>GitHub</h4>
+                                <p>For collaboration, version tracking, and storing prototype files across the team.</p>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool-icon">🛰️</div>
+                                <h4>NASA Resources</h4>
+                                <p>Including official NASA websites, Helioviewer images, and educational materials for scientific accuracy.</p>
+                            </div>
+                        </div>
+                        
+                        <p><strong>No programming or hardware was needed</strong> at this stage, making the prototype fully accessible and achievable using only design and free online resources.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">✨</span>
+                        <h3>How is SkyGlow creative?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SkyGlow brings creativity to space education through innovative approaches:</p>
+                        
+                        <div class="creativity-features">
+                            <div class="creativity-item">
+                                <div class="creativity-icon">📚</div>
+                                <h4>Storytelling Meets Real Science</h4>
+                                <p>Instead of presenting data in graphs or tables, it creates narratives where children follow characters affected by space weather.</p>
+                            </div>
+                            <div class="creativity-item">
+                                <div class="creativity-icon">🎭</div>
+                                <h4>Interactive Visuals & Animation</h4>
+                                <p>Characters, auroras, solar flares, and storms are illustrated in engaging ways that appeal to children's imagination.</p>
+                            </div>
+                            <div class="creativity-item">
+                                <div class="creativity-icon">🎯</div>
+                                <h4>Adaptive Learning Levels</h4>
+                                <p>Three levels ensure children, teens, and older learners get age-appropriate content, making it scalable and inclusive.</p>
+                            </div>
+                            <div class="creativity-item">
+                                <div class="creativity-icon">🌟</div>
+                                <h4>Abstract to Human Experience</h4>
+                                <p>Children see how space weather impacts daily life — from tractors and airplanes to city power grids — connecting cosmic events with familiar situations.</p>
+                            </div>
+                        </div>
+                        
+                        <p>This creative approach makes complex science <strong>memorable, fun, and emotionally engaging</strong> for young learners worldwide.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">🧠</span>
+                        <h3>What factors did your team consider during development?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>During development, our team carefully considered multiple important factors:</p>
+                        
+                        <div class="considerations-grid">
+                            <div class="consideration-item">
+                                <div class="consideration-icon">👶</div>
+                                <h4>Age-Appropriate Learning</h4>
+                                <p>Making concepts easy to understand for children while keeping older learners challenged through our three-level system.</p>
+                            </div>
+                            <div class="consideration-item">
+                                <div class="consideration-icon">🔬</div>
+                                <h4>Scientific Accuracy</h4>
+                                <p>Ensuring all stories, examples, and visuals are consistent with NASA's verified data and educational resources.</p>
+                            </div>
+                            <div class="consideration-item">
+                                <div class="consideration-icon">🎮</div>
+                                <h4>User Engagement</h4>
+                                <p>Storytelling, animations, and interactive elements designed to capture attention and encourage curiosity.</p>
+                            </div>
+                            <div class="consideration-item">
+                                <div class="consideration-icon">♿</div>
+                                <h4>Accessibility</h4>
+                                <p>Creating a visually appealing interface that is clear, simple, and usable without complex technology.</p>
+                            </div>
+                            <div class="consideration-item">
+                                <div class="consideration-icon">🎓</div>
+                                <h4>Educational Impact</h4>
+                                <p>Aligning content with STEM education principles, helping children connect science to real-world applications.</p>
+                            </div>
+                            <div class="consideration-item">
+                                <div class="consideration-icon">⚡</div>
+                                <h4>Practical Feasibility</h4>
+                                <p>Using only freely available resources and design tools to make the project achievable within the challenge timeline.</p>
+                            </div>
+                        </div>
+                        
+                        <p>These considerations ensure SkyGlow is not just creative and engaging, but also <strong>educationally sound, accessible, and implementable</strong> for real-world impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Videos Page Content -->
+        <div id="videos-page" class="page-content" style="display: none;">
+            <div class="page-header">
+                <button class="back-button" onclick="showHomepage()">
+                    <span class="back-arrow">←</span>
+                    Back to Home
+                </button>
+                <h2 class="section-title">Research Videos</h2>
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <p style="color: #b0bec5; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                    Our skyglow research provides scientific foundation for understanding atmospheric phenomena 
+                    and how space weather affects our night sky visibility - crucial elements in our children's story.
+                </p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <h3 class="video-title">Extended Skyglow Study (4 minutes)</h3>
+                    <p class="video-description">
+                        A comprehensive 240-second time-lapse showcasing atmospheric light phenomena. This research helps us 
+                        understand how space weather events can enhance or diminish skyglow effects, providing scientific 
+                        accuracy for our children's story about space weather impacts.
+                    </p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/8jOuzYMJncU" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <h3 class="video-title">Quick Skyglow Glimpse (30 seconds)</h3>
+                    <p class="video-description">
+                        A brief but captivating snapshot of atmospheric light interactions. This condensed view demonstrates 
+                        the visual effects that space weather can have on our night sky, informing the visual storytelling 
+                        elements of our educational children's book.
+                    </p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/YpIp6NwXPps" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="footer-text">
+                © 2025 Stellar Stories Project by Team Fakibazz • NASA Space Apps Challenge 2025 • Inspiring young minds about space weather
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Create animated stars background
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numberOfStars = 150;
+
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                // Random position
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                
+                // Random size
+                const size = Math.random() * 3 + 1;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                
+                // Random animation delay
+                star.style.animationDelay = Math.random() * 3 + 's';
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Initialize stars when page loads
+        document.addEventListener('DOMContentLoaded', createStars);
+
+        // Page navigation functions
+        function showVideos() {
+            document.getElementById('homepage').style.display = 'none';
+            document.getElementById('challenge-page').style.display = 'none';
+            document.getElementById('team-page').style.display = 'none';
+            document.getElementById('faq-page').style.display = 'none';
+            document.getElementById('videos-page').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showChallenge() {
+            document.getElementById('homepage').style.display = 'none';
+            document.getElementById('videos-page').style.display = 'none';
+            document.getElementById('team-page').style.display = 'none';
+            document.getElementById('faq-page').style.display = 'none';
+            document.getElementById('challenge-page').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showTeam() {
+            document.getElementById('homepage').style.display = 'none';
+            document.getElementById('videos-page').style.display = 'none';
+            document.getElementById('challenge-page').style.display = 'none';
+            document.getElementById('faq-page').style.display = 'none';
+            document.getElementById('team-page').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showFAQ() {
+            document.getElementById('homepage').style.display = 'none';
+            document.getElementById('videos-page').style.display = 'none';
+            document.getElementById('challenge-page').style.display = 'none';
+            document.getElementById('team-page').style.display = 'none';
+            document.getElementById('faq-page').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showHomepage() {
+            document.getElementById('videos-page').style.display = 'none';
+            document.getElementById('challenge-page').style.display = 'none';
+            document.getElementById('team-page').style.display = 'none';
+            document.getElementById('faq-page').style.display = 'none';
+            document.getElementById('homepage').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9893f8b344f7a491',t:'MTc1OTU3MzQ4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
