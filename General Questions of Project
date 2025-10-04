@@ -1,0 +1,87 @@
+🛰 1. What does it do / How does it work?
+
+SkyGlow is an interactive learning app concept designed to teach children about space weather — the phenomena like solar flares, coronal mass ejections (CMEs), auroras, and geomagnetic storms — and how they affect our daily lives on Earth.
+
+The app works through three learning levels:
+
+Beginner Level: Introduces kids to basic concepts like auroras, solar flares, and satellites through playful animations and visuals.
+
+Intermediate Level: Tells story-driven adventures where children follow relatable characters such as a farmer, a pilot, and a power grid operator, showing how space weather can affect GPS, radio communication, and electricity.
+
+Advanced Level: For older learners, it provides detailed simulations and research-based content, allowing users to explore NASA data and understand the real impact of solar activity on Earth systems.
+
+Through interactive storytelling, children learn by seeing cause-and-effect in real-world scenarios. For example, when a solar storm hits, Mr. Alex’s GPS-guided tractor zigzags, Captain Drake’s airplane radio goes silent, and Windy, the power grid operator, watches warning lights flash. This approach makes abstract space science concrete, relatable, and memorable.
+
+🌞 2. What benefits does it have?
+
+SkyGlow provides multiple educational and cognitive benefits:
+
+Simplifies complex science: Converts technical NASA data into engaging stories, animations, and visuals, helping children understand difficult concepts like geomagnetic storms and solar flares.
+
+Increases curiosity and engagement: Children follow characters and storylines, which makes learning interactive and exciting rather than passive.
+
+Teaches real-world relevance: Kids learn how space weather can impact technology, transportation, energy systems, and communication networks, connecting cosmic events to human life.
+
+Supports STEM education: Encourages interest in science, technology, engineering, and math through storytelling, visuals, and research-inspired content.
+
+Accessible and inclusive learning: Designed for all ages, with three levels of difficulty and visually appealing content that is easy to understand for children worldwide.
+
+🌍 3. What is the intended impact of the project?
+
+SkyGlow aims to:
+
+Make space science accessible and understandable: By turning complex space weather data into stories, children can explore science without being intimidated by technical terms or graphs.
+
+Promote awareness of the Sun–Earth connection: Children see how solar activity affects people, technology, and society in everyday life, fostering a sense of curiosity and responsibility.
+
+Inspire future learners and scientists: By giving them relatable characters and interactive experiences, SkyGlow encourages children to explore STEM subjects and think critically about scientific phenomena.
+
+Encourage global science literacy: Through digital storytelling and visuals, the app provides an entry point for children everywhere to learn about the universe, even without access to formal science classes.
+
+Overall, the intended impact is educational, motivational, and inspirational, combining curiosity-driven learning with real-world application.
+
+💻 4. What tools, coding languages, hardware, or software did you use?
+
+Since SkyGlow is a design and concept prototype, we used only software tools and online resources:
+
+Figma: For designing the app interface, interactive prototype pages, story layouts, and user navigation flow.
+
+Canva: To create visual assets, illustrations, infographics, and educational posters to support the storytelling.
+
+CapCut: For editing the promotional and presentation video, including animations, transitions, and story previews.
+
+GitHub: For collaboration, version tracking, and storing prototype files.
+
+NASA free resources: Including the official NASA websites, Helioviewer images, and educational materials to ensure scientific accuracy and real-world relevance.
+
+No programming or hardware was needed at this stage, making the prototype fully accessible and achievable using only design and free online resources.
+
+🌟 5. How is your project creative?
+
+SkyGlow is creative because it:
+
+Combines storytelling and real science: Instead of presenting data in graphs or tables, it creates a narrative where children follow characters affected by space weather.
+
+Uses interactive visuals and animation: Characters, auroras, solar flares, and storms are illustrated in engaging ways that appeal to children’s imagination.
+
+Adapts learning for different age groups: Three levels ensure children, teens, and older learners get content appropriate to their understanding, making it scalable and inclusive.
+
+Transforms abstract data into human experiences: Children see how space weather impacts daily life — from tractors and airplanes to city power grids — connecting cosmic events with familiar situations.
+
+This creative approach makes complex science memorable, fun, and emotionally engaging.
+
+🧠 6. What factors did your team consider while developing it?
+
+During development, our team carefully considered:
+
+Age-appropriate learning: Making concepts easy to understand for children while keeping older learners challenged.
+
+Scientific accuracy: Ensuring that all stories, examples, and visuals are consistent with NASA’s verified data and educational resources.
+
+User engagement: Storytelling, animations, and interactive elements were designed to capture attention and encourage curiosity.
+
+Accessibility: Creating a visually appealing interface that is clear, simple, and usable without complex technology.
+
+Educational impact: Aligning content with STEM education principles, helping children connect science to real-world applications.
+
+Practical feasibility: Using only freely available resources and design tools to make the project achievable within the challenge timeline.
